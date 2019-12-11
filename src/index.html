@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AngularJS Pokedex</title>
+  </head>
+  <body ng-app="app">
+    <div class="pokemon-list" ng-controller="Pokemons">
+      <h1>Here are some pokemons:</h1>
+      <ul>
+        <li ng-repeat="pokemon in pokemons track by $index">{{ pokemon.name }}</li>
+      </ul>
+    </div>
+  </body>
+</html>
