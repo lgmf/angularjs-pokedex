@@ -7,11 +7,8 @@
     <title>AngularJS Pokedex</title>
   </head>
   <body ng-app="app">
-    <div class="pokemon-list" ng-controller="Pokemons">
-      <h1>Here are some pokemons:</h1>
-      <ul>
-        <li ng-repeat="pokemon in pokemons track by $index">{{ pokemon.name }}</li>
-      </ul>
+    <div class="pokemons" ng-controller="Pokemons">
+      <pokemon-list list="pokemons"></pokemon-list>
     </div>
   </body>
 </html>

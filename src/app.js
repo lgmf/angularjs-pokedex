@@ -1,8 +1,8 @@
 require("angular");
-
 require("./core/index");
+require("./shared/index");
 
-const app = angular.module("app", ["core"]);
+const app = angular.module("app", ["core", "shared"]);
 
 app.controller("Pokemons", [
   "$scope",

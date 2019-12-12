@@ -1,2 +1,2 @@
 require("./core.module");
-require("./pokeapi.service");
+require("./poke-api.service");
