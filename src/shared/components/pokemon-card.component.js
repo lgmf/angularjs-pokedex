@@ -9,11 +9,9 @@
     },
     template: `
       <div class="cardheader">
-        <h5 class="title">#{{$ctrl.pokemon.id}} {{$ctrl.pokemon.name}}</h5>
+        <h5 class="title">#{{$ctrl.pokemon.id}} - {{$ctrl.pokemon.name}}</h5>
         <div class="types">
-          <span class="badge" ng-repeat="slot in $ctrl.pokemon.types" pokemon-type="{{slot.type.name}}">
-            {{slot.type.name}}
-          </span>
+          <pokemon-type types="$ctrl.pokemon.types"></pokemon-type>
         </div>
         <div class="sprite" bg-image="{{$ctrl.pokemon.sprites.front_default}}"></div>
       </div>

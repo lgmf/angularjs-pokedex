@@ -1,5 +1,7 @@
 require("./shared.module");
 
 require("./components/pokemon-card.component");
-require("./directives/pokemon-type.directive");
+require("./components/pokemon-type.component");
+
+require("./directives/pokemon-type-bg.directive");
 require("./directives/background-image.directive");

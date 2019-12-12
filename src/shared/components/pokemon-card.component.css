@@ -27,18 +27,6 @@ pokemon-card > .cardheader > .title {
   font-weight: 900;
 }
 
-pokemon-card > .cardheader > .types > .badge {
-  min-width: 150px;
-  padding: calc(var(--baseline) * 2);
-  border-radius: var(--baseline);
-  color: var(--base);
-  text-shadow: 0 1px 0 black, 0 0 1px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 0.8), 0 0 4px rgba(0, 0, 0, 0.9);
-}
-
-pokemon-card > .cardheader > .types > .badge + .badge {
-  margin-left: calc(var(--baseline) * 2);
-}
-
 pokemon-card > .cardheader > .sprite {
   height: 80px;
   width: 80px;

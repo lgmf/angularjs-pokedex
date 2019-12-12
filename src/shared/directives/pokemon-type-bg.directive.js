@@ -46,9 +46,11 @@
     }
   };
 
-  shared.directive("pokemonType", function() {
-    return function(scope, element, attrs) {
-      const type = attrs.pokemonType;
+  shared.directive("pokemonTypeBg", function() {
+    return function(_, element, attrs) {
+      if (!attrs || !attrs.pokemonTypeBg) return;
+
+      const type = attrs.pokemonTypeBg;
       const bgColor = getColorByType(type.toLocaleLowerCase());
       element.css({ "background-color": bgColor });
     };
