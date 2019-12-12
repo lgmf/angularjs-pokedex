@@ -1,1 +1,5 @@
-angular.module("core", []);
+(function(angular) {
+  "use strict";
+
+  angular.module("core", []);
+})(angular);
