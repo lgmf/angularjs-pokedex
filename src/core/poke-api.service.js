@@ -13,6 +13,10 @@
           const offset = (page - 1) * limit;
           const url = `${endpoint}?offset=${offset}&limit=${limit}`;
           return $http({ method: "GET", url });
+        },
+        getByName(name) {
+          const url = `${endpoint}/${name}`;
+          return $http({ method: "GET", url });
         }
       };
     }

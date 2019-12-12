@@ -5,17 +5,45 @@
 
   pokemonView.component("pokemonsView", {
     template: `
-      <div class="pokemons">
-        <pokemon-list list="pokemons"></pokemon-list>
+      <pokemon-list list="$ctrl.pokemons"></pokemon-list>
+      <div class="btn-group">
+        <button class="btn" ng-click="$ctrl.onPrevious()">Previous</button>
+        <button class="btn" ng-click="$ctrl.onNext()">Next</button>
       </div>
     `,
     controller: [
-      "$scope",
+      "$q",
       "PokeApiService",
-      function($scope, pokeApiService) {
-        pokeApiService.list().then(response => {
-          $scope.pokemons = response.data.results;
-        });
+      function($q, pokeApiService) {
+        const $ctrl = this;
+
+        function setPokemons(page, limit = 12) {
+          pokeApiService.list(page, limit).then(response => {
+            const pokemons = response.data.results;
+            const pokemonListDetails = pokemons.map(pokemon => pokeApiService.getByName(pokemon.name));
+            $q.all(pokemonListDetails).then(response => {
+              $ctrl.pokemons = response.map(pokemon => pokemon.data);
+            });
+          });
+        }
+
+        let page = 1;
+
+        $ctrl.onPrevious = function() {
+          if (page === 1) {
+            return;
+          }
+
+          page--;
+          setPokemons(page);
+        };
+
+        $ctrl.onNext = function() {
+          page++;
+          setPokemons(page);
+        };
+
+        setPokemons(page);
       }
     ]
   });

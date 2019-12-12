@@ -3,8 +3,12 @@
   align-items: center;
   background: var(--dark-primary-color);
   color: var(--text-primary-color);
-  padding: var(--baseline) calc(var(--baseline) * 15);
+  padding: 0 calc(var(--baseline) * 15);
   margin-bottom: calc(var(--baseline) * 5);
+}
+
+.header > .brand {
+  font-size: var(--h4);
 }
 
 .header > navbar {

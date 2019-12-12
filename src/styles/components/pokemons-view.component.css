@@ -1,0 +1,4 @@
+pokemons-view {
+  display: grid;
+  grid-gap: calc(var(--baseline) * 10);
+}

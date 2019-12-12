@@ -1,0 +1,9 @@
+.btn {
+  min-width: 120px;
+  padding: calc(var(--baseline) * 3) calc(var(--baseline) * 6);
+  border: none;
+  border-radius: var(--baseline);
+  text-transform: uppercase;
+  background: var(--default-primary-color);
+  color: var(--text-primary-color);
+}

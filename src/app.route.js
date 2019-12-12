@@ -7,9 +7,9 @@
 
   const routes = [
     {
-      url: "/pokemons",
+      url: "/pokedex",
       template: "<pokemons-view></pokemons-view>",
-      label: "pokemons"
+      label: "pokedex"
     }
   ];
 

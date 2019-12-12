@@ -1,21 +1,76 @@
 pokemon-list {
-  display: block;
-}
-
-pokemon-list > .title {
-  margin-bottom: calc(var(--baseline) * 6);
-}
-
-pokemon-list > .list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: calc(var(--baseline) * 4);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: calc(var(--baseline) * 10);
 }
 
-pokemon-list > .list > .item {
-  padding: calc(var(--baseline) * 4);
-  background: var(--default-primary-color);
-  color: var(--text-primary-color);
-  border: 1px solid var(--divider-color);
+pokemon-list > .card {
+  position: relative;
+  background: #fff;
+  color: #000;
   text-transform: capitalize;
+  padding: calc(var(--baseline) * 4) calc(var(--baseline) * 8);
+  border-radius: calc(var(--baseline) * 2);
+}
+
+pokemon-list > .card:hover {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+pokemon-list > .card > .cardheader,
+pokemon-list > .card > .cardbody {
+  padding: calc(var(--baseline) * 4) 0;
+}
+
+pokemon-list > .card > .cardheader {
+  display: grid;
+  grid-gap: calc(var(--baseline) * 5);
+  background: inherit;
+  border-bottom: 1px solid #ececec;
+}
+
+pokemon-list > .card > .cardheader > .title {
+  font-weight: 900;
+}
+
+pokemon-list > .card > .cardheader > .types > .badge {
+  padding: calc(var(--baseline) * 2);
+  border-radius: calc(var(--baseline) * 2);
+  color: #fff;
+  text-shadow: 0 1px 0 black, 0 0 1px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 0.8), 0 0 4px rgba(0, 0, 0, 0.9);
+}
+
+pokemon-list > .card > .cardheader > .types > .badge + .badge {
+  margin-left: calc(var(--baseline) * 2);
+}
+
+pokemon-list > .card > .cardheader > .sprite {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  top: -20px;
+  right: calc(var(--baseline) * 8);
+  background-size: contain;
+  background-position: center;
+  background-color: #fff;
+  border-radius: calc(var(--baseline) * 2);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+pokemon-list > .card > .cardbody {
+  display: flex;
+}
+
+pokemon-list > .card > .cardbody > .info {
+  display: grid;
+  grid-gap: calc(var(--baseline) * 2);
+}
+
+pokemon-list > .card > .cardbody > .info + .info {
+  margin-left: calc(var(--baseline) * 14);
+}
+
+pokemon-list > .card > .cardbody > .info > .title {
+  text-transform: uppercase;
+  color: #bbb;
 }

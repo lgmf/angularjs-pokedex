@@ -1,5 +1,5 @@
 .container {
   max-width: 19200px;
   margin: 0 auto;
-  padding: 0 calc(var(--baseline) * 15);
+  padding: calc(var(--baseline) * 10) calc(var(--baseline) * 15) calc(var(--baseline) * 10) calc(var(--baseline) * 15);
 }

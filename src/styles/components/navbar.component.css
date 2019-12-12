@@ -9,10 +9,10 @@ navbar > .item:hover {
 
 navbar > .item > .link {
   display: block;
-  padding: calc(var(--baseline) * 4);
+  padding: calc(var(--baseline) * 5);
   text-transform: capitalize;
 }
 
-navbar > .item > .link.-active {
+navbar > .item:not(:hover) > .link.-active {
   text-decoration: underline;
 }
