@@ -1,13 +1,15 @@
 (function(angular) {
   "use-strict";
 
-  const pokemonView = angular.module("pokemonView");
+  const pokemonView = angular.module("pokedexView");
 
-  pokemonView.component("pokemonsView", {
+  pokemonView.component("pokedex", {
     template: `
-      <pokemon-list list="$ctrl.pokemons"></pokemon-list>
+      <div class="pokemons">
+        <pokemon-card ng-repeat="pokemon in $ctrl.pokemons track by pokemon.name" pokemon="pokemon"></pokemon-card>
+      </div>
       <div class="btn-group">
-        <button class="btn" ng-click="$ctrl.onPrevious()">Previous</button>
+        <button class="btn" ng-click="$ctrl.onPrevious()" ng-disabled="$ctrl.page === 1">Previous</button>
         <button class="btn" ng-click="$ctrl.onNext()">Next</button>
       </div>
     `,
@@ -27,23 +29,23 @@
           });
         }
 
-        let page = 1;
+        $ctrl.page = 1;
 
         $ctrl.onPrevious = function() {
-          if (page === 1) {
+          if ($ctrl.page === 1) {
             return;
           }
 
-          page--;
-          setPokemons(page);
+          $ctrl.page--;
+          setPokemons($ctrl.page);
         };
 
         $ctrl.onNext = function() {
-          page++;
-          setPokemons(page);
+          $ctrl.page++;
+          setPokemons($ctrl.page);
         };
 
-        setPokemons(page);
+        setPokemons($ctrl.page);
       }
     ]
   });

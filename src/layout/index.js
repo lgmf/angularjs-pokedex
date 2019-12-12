@@ -1,2 +1,2 @@
 require("./layout.module");
-require("./navbar.component");
+require("./components/navbar.component");

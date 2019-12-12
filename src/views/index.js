@@ -1,2 +1,2 @@
-require("./pokemons.view");
-require("./pokemons-view.component");
+require("./pokedex/pokedex.view");
+require("./pokedex/pokedex.component");

@@ -7,4 +7,12 @@
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --text-primary-color: #ffffff;
+
+  --background: #ececec;
+
+  --base: #fff;
+  --base-100: #dadada;
+  --base-300: #ccc;
+  --base-400: #bbb;
+  --base-900: #000;
 }

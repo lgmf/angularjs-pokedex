@@ -26,3 +26,7 @@ h6 {
 p {
   font-size: var(--p);
 }
+
+span {
+  font-size: var(--span);
+}

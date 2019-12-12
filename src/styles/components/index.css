@@ -1,3 +1,4 @@
-@import url("./navbar.component.css");
-@import url("./pokemon-list.component.css");
-@import url("./pokemons-view.component.css");
+@import url("../../layout/components/navbar.component.css");
+@import url("../../shared/components/pokemon-card.component.css");
+
+@import url("../../views/pokedex/pokedex.component.css");

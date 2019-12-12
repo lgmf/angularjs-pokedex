@@ -1,9 +1,30 @@
 .btn {
-  min-width: 120px;
+  min-width: 100px;
+  font-size: 14px;
   padding: calc(var(--baseline) * 3) calc(var(--baseline) * 6);
-  border: none;
+  border: 1px solid transparent;
   border-radius: var(--baseline);
   text-transform: uppercase;
   background: var(--default-primary-color);
   color: var(--text-primary-color);
+  user-select: none;
+  transition: background 0.1s linear;
+}
+
+.btn:not(:disabled):hover,
+.btn:not(:disabled):active,
+.btn:not(:disabled):focus {
+  box-shadow: 0px 0px 8px 0px var(--dark-primary-color);
+}
+
+.btn:not(:disabled):active,
+.btn:not(:disabled):focus {
+  background: var(--dark-primary-color);
+  color: var(--text-primary-color);
+}
+
+.btn:disabled {
+  background: var(--base-100);
+  color: var(--base-400);
+  border-color: var(--base-400);
 }

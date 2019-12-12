@@ -1,0 +1,10 @@
+pokedex {
+  display: grid;
+  grid-gap: calc(var(--baseline) * 10);
+}
+
+pokedex > .pokemons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: calc(var(--baseline) * 10);
+}
