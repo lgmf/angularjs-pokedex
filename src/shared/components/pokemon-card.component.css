@@ -5,6 +5,7 @@ pokemon-card {
   text-transform: capitalize;
   padding: calc(var(--baseline) * 4) calc(var(--baseline) * 8);
   border-radius: calc(var(--baseline) * 2);
+  margin-top: calc(var(--baseline) * 4);
 }
 
 pokemon-card:hover {
@@ -13,7 +14,7 @@ pokemon-card:hover {
 
 pokemon-card > .cardheader,
 pokemon-card > .cardbody {
-  padding: calc(var(--baseline) * 4) 0;
+  padding: calc(var(--baseline) * 5) 0;
 }
 
 pokemon-card > .cardheader {
@@ -28,11 +29,11 @@ pokemon-card > .cardheader > .title {
 }
 
 pokemon-card > .cardheader > .sprite {
-  height: 80px;
-  width: 80px;
+  height: 56px;
+  width: 56px;
   position: absolute;
-  top: calc(var(--baseline) * -5);
-  right: calc(var(--baseline) * 8);
+  top: calc(var(--baseline) * -4);
+  right: calc(var(--baseline) * 2);
   background-size: contain;
   background-position: center;
   background-color: var(--base);
@@ -56,4 +57,56 @@ pokemon-card > .cardbody > .info + .info {
 pokemon-card > .cardbody > .info > .title {
   text-transform: uppercase;
   color: var(--base-400);
+}
+
+@media screen and (min-width: 768px) {
+  pokemon-card {
+    margin-top: calc(var(--baseline) * 5);
+  }
+
+  pokemon-card > .cardheader > .sprite {
+    height: 80px;
+    width: 80px;
+    top: calc(var(--baseline) * -5);
+    right: calc(var(--baseline) * 5);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  pokemon-card {
+    margin-top: calc(var(--baseline) * 4);
+  }
+
+  pokemon-card > .cardheader > .sprite {
+    height: 56px;
+    width: 56px;
+    top: calc(var(--baseline) * -4);
+    right: calc(var(--baseline) * 2);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  pokemon-card {
+    margin-top: calc(var(--baseline) * 4);
+  }
+
+  pokemon-card > .cardheader > .sprite {
+    height: 64px;
+    width: 64px;
+    top: calc(var(--baseline) * -4);
+    right: calc(var(--baseline) * 4);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  pokemon-card {
+    margin-top: calc(var(--baseline) * 4);
+  }
+
+  pokemon-card > .cardheader > .sprite {
+    height: 80px;
+    width: 80px;
+    top: calc(var(--baseline) * -5);
+    right: calc(var(--baseline) * 5);
+  }
 }

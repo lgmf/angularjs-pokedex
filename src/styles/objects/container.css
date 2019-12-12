@@ -1,5 +1,27 @@
 .container {
   max-width: 19200px;
   margin: 0 auto;
-  padding: calc(var(--baseline) * 10) calc(var(--baseline) * 15) calc(var(--baseline) * 10) calc(var(--baseline) * 15);
+  padding: calc(var(--baseline) * 3) calc(var(--baseline) * 5);
+  padding-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: calc(var(--baseline) * 6) calc(var(--baseline) * 9);
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: calc(var(--baseline) * 8) calc(var(--baseline) * 12);
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: calc(var(--baseline) * 10) calc(var(--baseline) * 15);
+    padding-top: 0;
+  }
 }

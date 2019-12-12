@@ -3,7 +3,7 @@
 
   const app = angular.module("app");
 
-  const defaultRoute = "/pokemons";
+  const defaultRoute = "/pokedex";
 
   const routes = [
     {
