@@ -1,0 +1,18 @@
+navbar {
+  display: flex;
+}
+
+navbar > .item:hover {
+  background: var(--light-primary-color);
+  color: var(--primary-text-color);
+}
+
+navbar > .item > .link {
+  display: block;
+  padding: calc(var(--baseline) * 4);
+  text-transform: capitalize;
+}
+
+navbar > .item > .link.-active {
+  text-decoration: underline;
+}

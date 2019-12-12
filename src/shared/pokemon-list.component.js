@@ -8,9 +8,9 @@
       list: "<"
     },
     template: `
-      <h1>Here are some pokemons:</h1>
-      <ul>
-        <li ng-repeat="pokemon in $ctrl.list track by $index">{{ pokemon.name }}</li>
+      <h1 class="title">Here are some pokemons:</h1>
+      <ul class="list">
+        <li class="item" ng-repeat="pokemon in $ctrl.list track by $index">{{ pokemon.name }}</li>
       </ul>
     `,
     controller: function() {}

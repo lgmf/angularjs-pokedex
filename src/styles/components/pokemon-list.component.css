@@ -1,0 +1,21 @@
+pokemon-list {
+  display: block;
+}
+
+pokemon-list > .title {
+  margin-bottom: calc(var(--baseline) * 6);
+}
+
+pokemon-list > .list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: calc(var(--baseline) * 4);
+}
+
+pokemon-list > .list > .item {
+  padding: calc(var(--baseline) * 4);
+  background: var(--default-primary-color);
+  color: var(--text-primary-color);
+  border: 1px solid var(--divider-color);
+  text-transform: capitalize;
+}

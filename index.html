@@ -7,6 +7,11 @@
     <title>AngularJS Pokedex</title>
   </head>
   <body ng-app="app">
-    <main ng-view></main>
+    <header class="header" ng-controller="ActiveRoute">
+      <span class="brand">Pokedex</span>
+      <navbar routes="routes" active-route="activatedRoute"></navbar>
+    </header>
+
+    <main class="container" ng-view></main>
   </body>
 </html>
