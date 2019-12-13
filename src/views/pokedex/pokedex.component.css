@@ -1,12 +1,13 @@
 pokedex {
   display: grid;
-  grid-gap: calc(var(--baseline) * 10);
+  grid-gap: calc(var(--baseline) * 6);
 }
 
 pokedex > .pokemons {
-  min-height: 730px;
+  min-height: 860px;
   display: grid;
-  grid-gap: calc(var(--baseline) * 10);
+  grid-gap: calc(var(--baseline) * 5);
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {

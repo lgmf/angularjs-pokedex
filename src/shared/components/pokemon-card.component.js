@@ -9,7 +9,8 @@
     },
     template: `
       <div class="cardheader">
-        <h5 class="title">#{{$ctrl.pokemon.id}} {{$ctrl.pokemon.name}}</h5>
+        <p class="info">#{{$ctrl.pokemon.id}}</p>
+        <h4 class="title">{{$ctrl.pokemon.name}}</h4>
         <div class="types">
           <pokemon-type types="$ctrl.pokemon.types"></pokemon-type>
         </div>

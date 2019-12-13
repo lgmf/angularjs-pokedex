@@ -1,0 +1,12 @@
+loader {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border: 6px solid var(--light-primary-color);
+  border-top-color: var(--dark-primary-color);
+  border-radius: 50%;
+  animation: 0.75s linear infinite spinner;
+}

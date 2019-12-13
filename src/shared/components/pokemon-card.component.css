@@ -24,6 +24,10 @@ pokemon-card > .cardheader {
   border-bottom: 1px solid var(--background);
 }
 
+pokemon-card > .cardheader > .info {
+  color: var(--base-400);
+}
+
 pokemon-card > .cardheader > .title {
   font-weight: 900;
 }

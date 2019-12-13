@@ -18,6 +18,7 @@ Utilities – utilities and helper classes with ability to override anything whi
 */
 
 @import url("./src/styles/settings/index.css");
+@import url("./src/styles/tools/index.css");
 @import url("./src/styles/generic/index.css");
 @import url("./src/styles/elements/index.css");
 @import url("./src/styles/objects/index.css");

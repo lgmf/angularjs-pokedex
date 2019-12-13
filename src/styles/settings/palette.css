@@ -1,15 +1,14 @@
 :root {
-  --accent-color: #009688;
-  --dark-primary-color: #303f9f;
-  --default-primary-color: #3f51b5;
-  --divider-color: #bdbdbd;
-  --light-primary-color: #c5cae9;
-  --primary-text-color: #212121;
-  --secondary-text-color: #757575;
+  --dark-primary-color: #84081d;
   --text-primary-color: #ffffff;
+  --default-primary-color: #dc0a2d;
+  --primary-text-color: #000;
+  --light-primary-color: #de7b8b;
 
+  --dark-accent-color: #33693f;
+  --accent-color: #52ae5f;
+  --divider-color: #bdbdbd;
   --background: #ececec;
-
   --base: #fff;
   --base-100: #dadada;
   --base-300: #ccc;

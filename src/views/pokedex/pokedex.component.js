@@ -6,7 +6,11 @@
   pokemonView.component("pokedex", {
     template: `
       <div class="pokemons">
-        <pokemon-card ng-repeat="pokemon in $ctrl.pokemons track by pokemon.name" pokemon="pokemon"></pokemon-card>
+        <loader ng-if="$ctrl.loading"></loader>
+        <pokemon-card 
+          ng-if="!$ctrl.loading " 
+          ng-repeat="pokemon in $ctrl.pokemons track by pokemon.name" 
+          pokemon="pokemon"></pokemon-card>
       </div>
       <div class="btn-group">
         <button class="btn" ng-click="$ctrl.onPrevious()" ng-disabled="$ctrl.page === 1">Previous</button>
@@ -19,12 +23,16 @@
       function($q, pokeApiService) {
         const $ctrl = this;
 
+        $ctrl.loading = true;
+
         function setPokemons(page, limit = 12) {
+          $ctrl.loading = true;
           pokeApiService.list(page, limit).then(response => {
             const pokemons = response.data.results;
             const pokemonListDetails = pokemons.map(pokemon => pokeApiService.getByName(pokemon.name));
             $q.all(pokemonListDetails).then(response => {
               $ctrl.pokemons = response.map(pokemon => pokemon.data);
+              $ctrl.loading = false;
             });
           });
         }

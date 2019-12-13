@@ -1,3 +1,3 @@
 (function(angular) {
-  angular.module("app", ["ngRoute", "layout", "pokedexView"]);
+  angular.module("app", ["layout", "pokedexView"]);
 })(angular);
