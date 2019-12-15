@@ -14,7 +14,8 @@
         class="page"
         ng-repeat="page in $ctrl.pages"
         ng-class="{'-selected': page === $ctrl.current}"
-        ng-click="$ctrl.onPageSelected(page)">{{ page }}</button>
+        ng-click="$ctrl.onPageSelected($event, page)"
+        scroll-into="{{page === $ctrl.current}}">{{ page }}</button>
     `,
     controller: [
       "$scope",
@@ -23,10 +24,13 @@
 
         const pagesQuantity = Math.ceil($ctrl.max / $ctrl.limit);
 
-        $ctrl.pages = Number.isNaN(pagesQuantity) ? [] : Array.from({ length: pagesQuantity }, (_, i) => i + 1);
+        $ctrl.pages = Number.isNaN(pagesQuantity)
+          ? []
+          : Array.from({ length: pagesQuantity }, (_, i) => i + 1);
 
-        $ctrl.onPageSelected = function(page) {
+        $ctrl.onPageSelected = function(event, page) {
           $ctrl.current = page;
+          event.target.scrollIntoView();
           $scope.$emit("pageSelected", { selected: page });
         };
       }

@@ -1,18 +1,20 @@
 pagination {
+  max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  overflow: auto;
 }
 
 pagination > .page {
   background: inherit;
   border: 2px solid transparent;
-}
-
-pagination > .page + .page {
-  margin-left: calc(var(--baseline) * 4);
+  padding: calc(var(--baseline) * 2) calc(var(--baseline) * 3);
 }
 
 pagination > .page:hover,
 pagination > .page.-selected {
   border-bottom-color: var(--accent-color);
+}
+
+pagination > .page:focus {
+  border-color: var(--dark-accent-color);
 }

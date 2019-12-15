@@ -8,6 +8,11 @@ pokedex > .pokemons {
   grid-gap: calc(var(--baseline) * 5);
 }
 
+pokedex > .controls {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 pokedex > .controls > .previousbtn {
   margin-right: calc(var(--baseline) * 5);
 }
