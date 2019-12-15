@@ -1,6 +1,7 @@
 @import url("../../layout/components/navbar.component.css");
 
 @import url("../../shared/components/loader.component.css");
+@import url("../../shared/components/pagination.component.css");
 @import url("../../shared/components/pokemon-card.component.css");
 @import url("../../shared/components/pokemon-type.component.css");
 
