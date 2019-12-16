@@ -1,43 +1,5 @@
-const path = require("path");
+const devConfig = require("./build/dev.config");
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const prodConfig = require("./build/prod.config");
 
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-module.exports = {
-  mode: "development",
-  entry: "./main.js",
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/"
-  },
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    port: 4200
-  },
-  resolve: {
-    extensions: [".wasm", ".mjs", ".js", ".json"],
-    alias: {}
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader"]
-      }
-    ]
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./index.html"
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
-  ]
-};
+module.exports = env => (!!env && env.production ? prodConfig : devConfig);
